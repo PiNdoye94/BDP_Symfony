@@ -192,7 +192,10 @@ body{
     display: inline-block;
 	}
 
-	.main_container .container .donneesClient #static, #dynamic {
+	#nom_employeur, #raison_social, #identifiant_employeur, #Adresse_employeur, 
+	#agios_compte_courant, #salaire_client, #duree_blocage, #MontantRenumeration, #frais_ouverture{
+
+		display: none;
 
 	}
 
@@ -352,7 +355,7 @@ body{
 			<div class="container">
 				<div class="content">
 					<div class="item">
-						<form id="formulaire" name="ouvertureCompte" action="{{path('enregistrement')}}" method="POST">  
+						<form id="formulaire" name="formouverture" action="{{path('enregistrement')}}" method="POST">  
 			                <fieldset class="donneesClient">
 			                	<legend>Informations client</legend>
 			                        <div>
@@ -453,49 +456,49 @@ body{
 				                        </div>
 			                        </div>
 			                        <div id="dynamic">
-				                        <div id="salaire">
+				                        <div id="salaire_client">
 				                            <label for="salaire_client">Montant Salaire<span id="error_salaire"></span> </label>
-				                            <input type="text" name="salaire" id="salaire_client" class="input_saisie"/>
+				                            <input type="text" name="salaire" class="input_saisie"/>
 				                            <span id="error_salaireMessage"></span>
 				                        </div>
-				                        <div id="nomEmployeur">
+				                        <div id="nom_employeur">
 				                            <label for="nom_Employeur">Nom Employeur<span id="error_nomEmp"></span> </label>
-				                            <input type="text" name="nom_employeur" id="nom_employeur" class="input_saisie"/>
+				                            <input type="text" name="nom_employeur" class="input_saisie"/>
 				                            <!--span id="error_nomEmpMessage"></span-->
 				                        </div>
-				                        <div id="raisonSociale">
+				                        <div id="raison_social">
 				                            <label for="raison_sociale">Raison Sociale Employeur<span id="error_rSociale"></span> </label>
-				                            <input type="text" name="rs_employeur" id="raison_social" class="input_saisie"/>
+				                            <input type="text" name="rs_employeur" class="input_saisie"/>
 				                            <!--span id="error_rSocialeMessage"></span-->
 				                        </div>
-				                        <div id="idEmployeur">
+				                        <div id="identifiant_employeur">
 				                            <label for="identifiant_employeur">ID Employeur<span id="error_idEmpMessage"></span> </label>
-				                            <input type="text" name="id_employeur" id="identifiant_employeur" class="input_saisie"/>
+				                            <input type="text" name="id_employeur" class="input_saisie"/>
 				                            <!--span id="error_idEmpMessage"></span-->
 				                        </div>
-				                        <div id="adresseEmployeur">
+				                        <div id="Adresse_employeur">
 				                            <label for="Adresse_employeur">Adresse Employeur<span id="error_adresseEmp"></span> </label>
-				                            <input type="text" name="adresse_employeur" id="Adresse_employeur" class="input_saisie"/>
+				                            <input type="text" name="adresse_employeur" class="input_saisie"/>
 				                            <!--span id="error_adresseEmpMessage"></span-->
 				                        </div>
-				                        <!--div id="dureeBlocage">                            
+				                        <div id="duree_blocage">                            
 				                            <label for="duree_blocage">Durée de Blocage<span id="error_dureeBlocage"></span> </label>
-				                            <input type="date" name="duree_blocage" id="duree_blocage" class="input_saisie"/>
-				                            <span id="error_dureeBlocageMessage"></span>
-				                        </div-->
-				                        <!--div>                            
-				                            <label for="MontantRenumeration">Montant de Renumeration<span id="error_montant_r"></span> </label>
-				                            <input type="text" name="montant_renumeration" id="MontantRenumeration" class="input_saisie"/>
-				                            <span id="error_montant_rMessage"></span>
+				                            <input type="date" name="duree_blocage" class="input_saisie"/>
+				                            <!--span id="error_dureeBlocageMessage"></span-->
 				                        </div>
-				                        <div id="fraisOuverture">
+				                        <div id="MontantRenumeration">                            
+				                            <label for="MontantRenumeration">Montant de Renumeration<span id="error_montant_r"></span> </label>
+				                            <input type="text" name="montant_renumeration" class="input_saisie"/>
+				                            <!--span id="error_montant_rMessage"></span-->
+				                        </div>
+				                        <div id="frais_ouverture">
 				                            <label for="frais_ouverture">Fais d'ouverture Compte<span id="error_fraisOuverture"></span> </label>
-				                            <input type="text" name="frais_ouverture" id="frais_ouverture" class="input_saisie"/>
-				                            <span id="error_fraisOuvertureMessage"></span>
-				                        </div-->
-				                        <div id="agios">
+				                            <input type="text" name="frais_ouverture" class="input_saisie"/>
+				                            <!--span id="error_fraisOuvertureMessage"></span-->
+				                        </div>
+				                        <div id="agios_compte_courant">
 				                            <label for="agios_compte_courant">Agios<span id="error_agios"></span> </label>
-				                            <input type="text" name="agios" id="agios_compte_courant" class="input_saisie">
+				                            <input type="text" name="agios" class="input_saisie">
 				                            <!--span id="error_agiosMessage"></span-->
 										</div>
 			                        </div>

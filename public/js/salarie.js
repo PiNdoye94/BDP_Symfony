@@ -1,4 +1,3 @@
-//controle sur l'affichage du formulaire avec le type de client
 var hamburger = document.querySelector(".hamburger");
     var wrapper  = document.querySelector(".wrapper");
     var backdrop = document.querySelector(".backdrop");
@@ -10,93 +9,52 @@ var hamburger = document.querySelector(".hamburger");
     backdrop.addEventListener("click", function(){
         wrapper.classList.remove("active");
     })
+
+var compteCourant= document.getElementById('courant');
+var compteEpargne= document.getElementById('epargne');
+var compteBloque= document.getElementById('bloque');
+
+compteCourant.addEventListener('click', function () {
+
+    document.getElementById("nom_employeur").style.display="block";
+    document.getElementById("raison_social").style.display="block";
+    document.getElementById("identifiant_employeur").style.display="block";
+    document.getElementById("Adresse_employeur").style.display="block";
+    document.getElementById("agios_compte_courant").style.display="block";
+    document.getElementById("salaire_client").style.display="block";
+    document.getElementById("duree_blocage").style.display="none";
+    document.getElementById("MontantRenumeration").style.display="none";
+    document.getElementById("frais_ouverture").style.display="none";
     
-/*var nouveauClient = document.getElementById("newclient");
-var clientExistant = document.getElementById("clientexistant");
+});
 
+compteEpargne.addEventListener('click', function () {
 
-nouveauClient.addEventListener("click",(event)=>{
-    event.preventDefault();
-    var formulaire = document.getElementById("formulaire");
-    var recherche = document.getElementById("search");
-
-    formulaire.style.display="block";
-    recherche.style.display="none";
+    document.getElementById("nom_employeur").style.display="none";
+    document.getElementById("raison_social").style.display="none";
+    document.getElementById("identifiant_employeur").style.display="none";
+    document.getElementById("Adresse_employeur").style.display="none";
+    document.getElementById("agios_compte_courant").style.display="none";
+    document.getElementById("salaire_client").style.display="none";
+    document.getElementById("duree_blocage").style.display="none";
+    document.getElementById("MontantRenumeration").style.display="block";
+    document.getElementById("frais_ouverture").style.display="block";
     
-})
+});
 
-clientExistant.addEventListener("click",(event)=>{
-    event.preventDefault();
-    var formulaire = document.getElementById("formulaire");
-    var recherche = document.getElementById("search");
+compteBloque.addEventListener('click', function () {
 
-    formulaire.style.display="block";
-    recherche.style.display="block";
+    document.getElementById("nom_employeur").style.display="none";
+    document.getElementById("raison_social").style.display="none";
+    document.getElementById("identifiant_employeur").style.display="none";
+    document.getElementById("Adresse_employeur").style.display="none";
+    document.getElementById("agios_compte_courant").style.display="none";
+    document.getElementById("salaire_client").style.display="none";
+    document.getElementById("duree_blocage").style.display="block";
+    document.getElementById("MontantRenumeration").style.display="block";
+    document.getElementById("frais_ouverture").style.display="block";
     
-})
-
-//controle sur l'affichage des champs avec le type de compte
-var selection = document.getElementById("typeCompte");
-selection.addEventListener("change",(event)=>{
-     event.preventDefault();     
-     console.log(selection.value);
-     
-     var donnees_comptes = document.getElementById('dataComptes');
-     var duree_blocage = document.getElementById("dureeBlocage");
-     var frais_ouverture = document.getElementById("fraisOuverture");
-     var nom_employeur = document.getElementById("nomEmployeur");
-     var raison_social = document.getElementById("raisonSociale");
-     var ID_employeur = document.getElementById("idEmployeur");
-     var adresse_employeur = document.getElementById("adresseEmployeur");
-     var agios = document.getElementById("agios");
-     var salaire = document.getElementById("salaire");
-    
-
-    if (selection.value=="1" || selection.value=="2" || selection.value=="3") {
-        document.getElementById("dataComptes").style.display="block";
-    }
-    else{
-        document.getElementById("dataComptes").style.display="none";
-    }
-    if(selection.value=="1"){
-      
-        document.getElementById("dureeBlocage").style.display="none";
-        document.getElementById("fraisOuverture").style.display="none";
-        
-    }
-    else{*/
-        /*prenom.removeAttribute("readonly");*/
-        /*document.getElementById("dureeBlocage").style.display="block";
-        document.getElementById("fraisOuverture").style.display="block";
-        
-      
-    }
-    if(selection.value=="2" || selection.value=="3"){
-        document.getElementById("nomEmployeur").style.display="none";
-        document.getElementById("raisonSociale").style.display="none";
-        document.getElementById("idEmployeur").style.display="none";
-        document.getElementById("adresseEmployeur").style.display="none";
-        document.getElementById("agios").style.display="none";
-        document.getElementById("salaire").style.display="none";
-       
-        if(selection.value=="2"){
-            document.getElementById("dureeBlocage").style.display="none";
-        }
-        else{
-            document.getElementById("dureeBlocage").style.display="block";
-        }
-
-    }
-    else{
-        document.getElementById("nomEmployeur").style.display="block";
-        document.getElementById("raisonSociale").style.display="block";
-        document.getElementById("idEmployeur").style.display="block";
-        document.getElementById("adresseEmployeur").style.display="block";
-        document.getElementById("agios").style.display="block";
-        document.getElementById("salaire").style.display="block";
-    }
-  
-})
+});
 
 /*function validateForm()
 {

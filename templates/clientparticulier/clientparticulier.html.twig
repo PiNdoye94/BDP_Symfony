@@ -192,7 +192,9 @@ body{
     display: inline-block;
 	}
 
-	.main_container .container .donneesClient #static, #dynamic {
+	#duree_blocage, #MontantRenumeration, #frais_ouverture{
+
+		display: none;
 
 	}
 
@@ -352,7 +354,7 @@ body{
 			<div class="container">
 				<div class="content">
 					<div class="item">
-						<form id="formulaire" name="ouvertureCompte" action="{{path('client_particulier')}}" method="POST">  
+						<form id="formulaire" name="ouvertureCompte" action="" method="POST">  
                 <fieldset class="donneesClient">
                 	<legend>Informations client</legend>
                         <div>
@@ -440,19 +442,19 @@ body{
 	                        </div>
                         </div>
                         <div id="dynamic">
-	                        <div id="dureeBlocage">                            
+	                        <div id="duree_blocage">                            
 	                            <label for="duree_blocage">Durée de Blocage<span id="error_dureeBlocage"></span> </label>
-	                            <input type="date" name="duree_blocage" id="duree_blocage" class="input_saisie"/>
+	                            <input type="date" name="duree_blocage" class="input_saisie"/>
 	                            <span id="error_dureeBlocageMessage"></span>
 	                        </div>
-	                        <div>                            
+	                        <div id="MontantRenumeration">                            
 	                            <label for="MontantRenumeration">Montant de Renumeration<span id="error_montant_r"></span> </label>
-	                            <input type="text" name="MontantRenumeration" id="MontantRenumeration" class="input_saisie"/>
+	                            <input type="text" name="MontantRenumeration" class="input_saisie"/>
 	                            <span id="error_montant_rMessage"></span>
 	                        </div>
-	                        <div id="fraisOuverture">
+	                        <div id="frais_ouverture">
 	                            <label for="frais_ouverture">Fais d'ouverture Compte<span id="error_fraisOuverture"></span> </label>
-	                            <input type="text" name="frais_ouverture" id="frais_ouverture" class="input_saisie"/>
+	                            <input type="text" name="frais_ouverture" class="input_saisie"/>
 	                            <!--span id="error_fraisOuvertureMessage"></span-->
 	                        </div>
                         </div>
@@ -477,7 +479,7 @@ body{
 		</div>
 	</div>
 
-	<script src="{{ asset('js/salarie.js') }}">
+	<script src="{{ asset('js/particulier.js') }}">
 	
 </script>
 </body>
