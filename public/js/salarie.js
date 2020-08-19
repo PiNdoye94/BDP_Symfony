@@ -16,6 +16,7 @@ var compteBloque= document.getElementById('bloque');
 
 compteCourant.addEventListener('click', function () {
 
+    
     document.getElementById("nom_employeur").style.display="block";
     document.getElementById("raison_social").style.display="block";
     document.getElementById("identifiant_employeur").style.display="block";
@@ -25,6 +26,10 @@ compteCourant.addEventListener('click', function () {
     document.getElementById("duree_blocage").style.display="none";
     document.getElementById("MontantRenumeration").style.display="none";
     document.getElementById("frais_ouverture").style.display="none";
+
+    document.getElementById("dureeBloque").disabled = true;
+    document.getElementById("montant_renumeration").disabled = true;
+    document.getElementById("fraisOuverture").disabled = true;
     
 });
 
@@ -39,6 +44,14 @@ compteEpargne.addEventListener('click', function () {
     document.getElementById("duree_blocage").style.display="none";
     document.getElementById("MontantRenumeration").style.display="block";
     document.getElementById("frais_ouverture").style.display="block";
+
+    document.getElementById("nameEmployeur").disabled = true;
+    document.getElementById("rs_employeur").disabled = true;
+    document.getElementById("id_employeur").disabled = true;
+    document.getElementById("adressEmployeur").disabled = true;
+    document.getElementById("salaire").disabled = true;
+    document.getElementById("agios").disabled = true;
+    document.getElementById("dureeBloque").disabled = true;
     
 });
 
@@ -53,6 +66,13 @@ compteBloque.addEventListener('click', function () {
     document.getElementById("duree_blocage").style.display="block";
     document.getElementById("MontantRenumeration").style.display="block";
     document.getElementById("frais_ouverture").style.display="block";
+
+    document.getElementById("nameEmployeur").disabled = true;
+    document.getElementById("rs_employeur").disabled = true;
+    document.getElementById("id_employeur").disabled = true;
+    document.getElementById("adressEmployeur").disabled = true;
+    document.getElementById("salaire").disabled = true;
+    document.getElementById("agios").disabled = true;
     
 });
 
