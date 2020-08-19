@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<h2>VEUILLEZ SELECTIONNER LE TYPE DE CLIENT A AJOUTER</h2>
+        <div id="container">
+            <div class="type">
+                <h3><a href="{{path('client_salarie')}}">CLIENT SALARIE</a></h3>
+            </div>
+            <div class="type">
+                <h3><a href="{{path('client_particulier')}}">CLIENT NON SALARIE</a></h3>
+            </div>
+            <div class="type">
+                <h3><a href="{{path('client_moral')}}">CLIENT MORAL</a></h3>
+            </div>
+        </div>
+{% endblock %}
